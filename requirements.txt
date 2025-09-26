@@ -1,0 +1,7 @@
+#packages
+streamlit
+pandas
+langchain
+openai
+psycopg2-binary
+langchain-community
