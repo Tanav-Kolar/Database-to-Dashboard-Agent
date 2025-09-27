@@ -1,15 +1,23 @@
-# config.py
+#config.py
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # --- Database Configuration ---
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
+DB_CONFIG = {
+    "user": os.environ.get("DB_USER", "your_username"),
+    "password": os.environ.get("DB_PASSWORD", "your_password"),
+    "host": os.environ.get("DB_HOST", "localhost"),
+    "port": os.environ.get("DB_PORT", "5432"),
+    "dbname": os.environ.get("DB_NAME", "your_database")
+}
 
 # --- LLM Configuration ---
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL")
+# Specify the Ollama model you want to use.
+# Make sure you have pulled this model using `ollama pull <model_name>`
+OLLAMA_MODEL = "llama3"  
+
+# Specify the base URL for the Ollama server.
+OLLAMA_BASE_URL = "http://localhost:11434"
+
+# --- Server Configuration ---
+API_HOST = "0.0.0.0"
+API_PORT = 8000
