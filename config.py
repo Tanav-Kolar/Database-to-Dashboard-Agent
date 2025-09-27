@@ -1,5 +1,9 @@
 #config.py
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from a .env file
+load_dotenv()
 
 # --- Database Configuration ---
 DB_CONFIG = {
