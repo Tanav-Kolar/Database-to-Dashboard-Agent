@@ -23,4 +23,3 @@ try:
         print("\nTest script finished. Connection status was printed above.")
 except ImportError as e:
     print(f"An error occurred during import: {e}")
-    print("Please ensure you are running this script from the root 'mcp-agent-system' directory.")
