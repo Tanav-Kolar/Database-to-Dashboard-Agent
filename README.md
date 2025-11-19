@@ -1,10 +1,10 @@
-# 📊 Database-to-Dashboard Agent
+# Database-to-Dashboard Agent
 
 An intelligent, agentic system that transforms natural language business queries into actionable insights. It converts plain English into SQL, executes queries securely against a PostgreSQL database, and automatically generates interactive visualizations.
 
 Built with **Python**, **Streamlit**, **Ollama**, and the **Model Context Protocol (MCP)**.
 
-## 🚀 Features
+## Features
 
 - **Natural Language Interface**: Ask questions like "Show me top 10 customers by revenue" or "Sales trend over the last year".
 - **Secure Architecture**: Uses a custom **Python MCP Server** to enforce strict **read-only** access to your database. No accidental deletes or updates.
@@ -12,7 +12,7 @@ Built with **Python**, **Streamlit**, **Ollama**, and the **Model Context Protoc
 - **Auto-Visualization**: Intelligent engine that analyzes data types and selects the best chart (Bar, Line, Scatter, Pie) automatically.
 - **Interactive Dashboard**: Built on **Streamlit** for a responsive and modern user experience.
 
-## 🏗️ Architecture
+## Architecture
 
 The system follows a secure, modular architecture:
 
@@ -34,7 +34,7 @@ graph LR
     Viz -->|Chart| UI
 ```
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - **Python 3.10+**
 - **PostgreSQL Database**: A running instance with some data.
@@ -42,7 +42,7 @@ graph LR
   - Install: [ollama.com](https://ollama.com)
   - Pull a model: `ollama pull llama3`
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -84,7 +84,7 @@ graph LR
    OLLAMA_MODEL=llama3
    ```
 
-## 🚀 Usage
+## Usage
 
 1. **Start the Application**
    ```bash
@@ -101,14 +101,14 @@ graph LR
 - "List the top 5 products with the highest unit price."
 - "Show me the number of invoices per month for 2023."
 
-## 🔒 Security
+## Security
 
 This project prioritizes security through the **Model Context Protocol (MCP)**:
 - **Read-Only Enforcement**: The custom MCP server (`src/database/postgres_mcp_server.py`) strictly blocks any `INSERT`, `UPDATE`, `DELETE`, `DROP`, or `ALTER` statements.
 - **Input Validation**: The `QueryValidator` ensures only valid `SELECT` statements are executed.
 - **Isolation**: The database connection is managed in a separate subprocess, isolating the application logic from direct database access.
 
-## ww Project Structure
+## Project Structure
 
 ```
 ├── app/
@@ -124,6 +124,6 @@ This project prioritizes security through the **Model Context Protocol (MCP)**:
 └── README.md                # Documentation
 ```
 
-## 📄 License
+## License
 
 MIT License
