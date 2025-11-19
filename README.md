@@ -20,7 +20,7 @@ The system follows a secure, modular architecture:
 graph LR
     User[User] -->|Natural Language| UI[Streamlit UI]
     UI -->|Query| Agent[SQL Agent]
-    Agent -->|Prompt| LLM[Ollama (Llama 3)]
+    Agent -->|Prompt| LLM["Ollama (Llama 3)"]
     LLM -->|SQL| Agent
     Agent -->|Validate| Validator[Query Validator]
     Validator -->|Safe SQL| MCP_Client[MCP Client]
