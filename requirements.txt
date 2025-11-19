@@ -1,0 +1,31 @@
+# Core Framework
+streamlit
+plotly
+pandas
+
+# PostgreSQL
+psycopg2-binary
+
+# MCP
+mcp
+
+# SQL Parsing & Validation
+sqlparse
+sqlglot
+
+# LLM
+ollama
+
+# Configuration & Environment
+pydantic
+pydantic-settings
+python-dotenv
+
+# Utilities
+loguru
+tenacity
+
+# Testing
+pytest
+pytest-asyncio
+pytest-cov
